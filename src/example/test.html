@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="zepto.min.js"></script>
+</head>
+<body>
+11111111111111
+<script type="text/javascript">
+
+    /**
+     * 图片预加载
+     */
+    function preload() {
+        $(window).on("load", function () {
+            var imgList = [
+                "./images/layers/content.png",
+                "./images/layers/navigation.png",
+                "./images/layers/popout.png",
+                "./images/layers/transparent.gif"
+            ];
+            for (var i = 0, len = imgList.length; i < len; ++i) {
+                new Image().src = imgList[i];
+            }
+        });
+    }
+    preload();
+</script>
+</body>
+</html>
