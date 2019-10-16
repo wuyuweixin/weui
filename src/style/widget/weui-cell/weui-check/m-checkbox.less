@@ -1,0 +1,49 @@
+@import "../../../base/fn";
+
+[class^="m-icon-"], [class*=" m-icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+  font: normal normal normal 14px/1 "fontello";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  &:before {
+    // 平滑升级
+    display: inline-block;
+    margin-left: .2em;
+    margin-right: .2em;
+  }
+}
+
+.weui-cells_checkbox {
+  .weui-cell__hd {
+    padding-right: @weuiCellInnerGapH;
+  }
+  .m-icon-checked {
+    width: 26px;
+    height: 23px;
+    overflow: hidden;
+    &:before {
+      font: normal normal normal 14px/1 "fontello";
+      content: '\f096';
+      color: #C9C9C9;
+      font-size: 23px;
+      display: block;
+    }
+  }
+}
+
+.weui-check {
+  .weui-cells_checkbox & {
+    &:checked {
+      & + .m-icon-checked {
+        &:before {
+          font: normal normal normal 14px/1 "fontello";
+          content: '\e895'; /*f14a*/
+          font-size: 23px;
+          color: #c1232b;
+        }
+      }
+    }
+  }
+}
